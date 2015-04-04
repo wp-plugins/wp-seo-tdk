@@ -3,7 +3,7 @@ Contributors: frustigor
 Donate link: http://www.utubon.com/donate
 Tags:wordpress seo, title seo, description seo, keywords seo
 Requires at least: 3.5.1
-Tested up to: 4.1.0
+Tested up to: 4.1.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html

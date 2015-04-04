@@ -3,7 +3,7 @@
 Plugin Name: WP SEO TDK
 Plugin URI: http://www.utubon.com/?p=1612
 Description: 为您提供一个通用的网页标题、关键词、描述方案，实现最基本的SEO TDK目的。
-Version: 1.0
+Version: 1.0.0
 Author: 否子戈
 Author URI: http://www.utubon.com/
 */
