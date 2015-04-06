@@ -3,7 +3,7 @@
 Plugin Name: WP SEO TDK
 Plugin URI: http://www.utubon.com/?p=1612
 Description: 为您提供一个通用的网页标题、关键词、描述方案，实现最基本的SEO TDK目的。
-Version: 1.0.0
+Version: 1.0.1
 Author: 否子戈
 Author URI: http://www.utubon.com/
 */
@@ -87,7 +87,7 @@ function wp_seo_tdk_title($title){
 		$title .= $seo_slip.sprintf(__('第%s页'),max($paged,$page));
 	}
 	$title = wp_seo_tdk_clear_html_code($title);
-	return $title;
+	return strip_tags($title);
 }
 // 网页关键字描述
 function wp_seo_tdk_keywords(){
@@ -145,7 +145,7 @@ function wp_seo_tdk_keywords(){
 		$keywords = trim(str_replace('"','',$keywords));
 		$keywords = wp_seo_tdk_clear_html_code($keywords);
 	}
-	if($keywords)echo '<meta name="keywords" content="'.$keywords.'" />'."\n";
+	if($keywords)echo '<meta name="keywords" content="'.strip_tags($keywords).'" />'."\n";
 }
 // 网页描述
 function wp_seo_tdk_description(){
@@ -177,7 +177,7 @@ function wp_seo_tdk_description(){
 		$description = str_replace('"','',$description);
 		$description = wp_seo_tdk_clear_html_code(trim($description));
 	}
-	if($description)echo '<meta name="description" content="'.$description.'" />'."\n";
+	if($description)echo '<meta name="description" content="'.strip_tags($description).'" />'."\n";
 }
 // 将关键词和描述输出在wp_head区域
 add_action('wp_head','add_wp_head_action_seo_tdk',0);
